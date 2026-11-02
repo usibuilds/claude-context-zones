@@ -1,0 +1,14 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "node .claude/hooks/statusline.js"
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      { "hooks": [ { "type": "command", "command": "node .claude/hooks/context-alert.js" } ] }
+    ],
+    "Stop": [
+      { "hooks": [ { "type": "command", "command": "node .claude/hooks/feature-done.js" } ] }
+    ]
+  }
+}
